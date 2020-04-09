@@ -28,7 +28,7 @@
 		--- switch	(左侧列表切换模块)
 			---- index.js
 			---- events
-		--- lasyload (下滑加载模块)
+		--- lazyload (下滑加载模块)
 			---- index.js
 			---- events
 				----- friendLoad.js
