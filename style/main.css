@@ -57,7 +57,8 @@ svg.icon {
  * * * * * * * * * * * * * * * * * * */
 
 .left {
-	flex: 0 0 25%;
+	flex: 0 0 20%;
+	min-width: 300px;
 	-webkit-box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2),
 		0 16px 24px 2px rgba(0, 0, 0, .14),
 		0 6px 30px 5px rgba(0, 0, 0, .12);
@@ -127,6 +128,7 @@ svg.icon {
 	font-size: 1.1rem;
 	border-radius: 1rem;
 	background-color: #ffffff;
+	/* transition: color .2s ease; */
 }
 
 .left_header_search_input {
@@ -151,17 +153,31 @@ svg.icon {
 	height: inherit;
 	padding: 0 .5rem;
 	cursor: default;
-	color: #CCCCCC;
+	color: #ccc;
 }
+
+.left_header_search.left_header_search-active>svg.icon-search,
+.left_header_search.left_header_search-active>svg.icon-clear,
+.left_header_search>svg.icon-clear:active {
+	color: #4b4b4b;
+}
+
 .left_header_search>svg.icon-search {
 	left: .5rem;
 }
+
 .left_header_search>svg.icon-clear {
+	display: none;
 	right: .5rem;
+	cursor: pointer;
 }
 
-.left_header_search-active>svg.icon {
-	color: #9A9A9A;
+.left_header_search>svg.icon-clear:hover {
+	color: #ccc;
+}
+
+.left_header_search>svg.icon-clear.icon-clear_show {
+	display: block;
 }
 
 /* * * * * * * * * * * * * * * * * * *
@@ -171,5 +187,5 @@ svg.icon {
  * * * * * * * * * * * * * * * * * * */
 
 .right {
-	flex: 1 0 auto;
+	flex: 1 1 auto;
 }
