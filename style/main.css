@@ -1,0 +1,175 @@
+/* * * * * * * * * * * * * * * * * * *
+ *
+ *				Global
+ *
+ * * * * * * * * * * * * * * * * * * */
+* {
+	padding: 0;
+	margin: 0;
+	caret-color: rgb(235, 151, 131);
+}
+
+*::selection {
+	color: #fff;
+	background-color: rgb(235, 151, 131);
+}
+
+body,
+html {
+	/* font-size: 12px; */
+	height: 100%;
+	min-width: 1000px;
+}
+
+.icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+
+#root {
+	display: flex;
+	width: inherit;
+	height: inherit;
+}
+
+.left,
+.right {
+	position: relative;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+svg.icon {
+	transition: background-color .2s ease,
+		color .2s ease;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+/* * * * * * * * * * * * * * * * * * *
+ *
+ *				Left Part
+ *
+ * * * * * * * * * * * * * * * * * * */
+
+.left {
+	flex: 0 0 25%;
+	-webkit-box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2),
+		0 16px 24px 2px rgba(0, 0, 0, .14),
+		0 6px 30px 5px rgba(0, 0, 0, .12);
+	box-shadow: 0 8px 10px -5px rgba(0, 0, 0, .2),
+		0 16px 24px 2px rgba(0, 0, 0, .14),
+		0 6px 30px 5px rgba(0, 0, 0, .12);
+	box-sizing: border-box;
+	padding: 0 3rem;
+	background-color: rgb(246, 242, 237);
+}
+
+/* * * * * * * * * * * *
+ * * * Left Header * * *
+ * * * * * * * * * * * */
+
+.left_header {
+	display: flex;
+	flex-direction: column;
+}
+
+.left_header_top {
+	display: flex;
+	margin: 2rem 0 1.5rem 0;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* * * User * * */
+.left_header_user {
+	display: flex;
+}
+
+.left_header_user_avatar {
+	flex: 0 0 3.7rem;
+	margin-right: 1rem;
+	height: 3.7rem;
+	border-radius: 50%;
+	background-color: rgb(235, 151, 131);
+}
+
+/* * * Name * * */
+.left_header_user_name {
+	display: flex;
+	align-items: center;
+	font-size: 1.1rem;
+}
+
+/* * * Create BTN * * */
+.left_header_createBtn {
+	font-size: 1.5rem;
+	color: rgb(235, 151, 131);
+}
+
+.left_header_createBtn:hover {
+	color: rgb(255, 177, 150);
+}
+
+.left_header_createBtn:active {
+	color: rgb(200, 100, 100);
+}
+
+/* * * Search * * */
+.left_header_search {
+	position: relative;
+	flex: 1 1 auto;
+	height: 2.5rem;
+	font-size: 1.1rem;
+	border-radius: 1rem;
+	background-color: #ffffff;
+}
+
+.left_header_search_input {
+	position: absolute;
+	left: 0;
+	height: inherit;
+	width: calc(100% - 5.5rem);
+	box-sizing: border-box;
+	margin: 0 2.5rem 0 3rem;
+	padding: .6rem 0;
+	outline: unset;
+	overflow: hidden;
+	white-space: nowrap;
+	letter-spacing: .05rem;
+	font-size: 1rem;
+}
+
+
+.left_header_search>svg.icon-search,
+.left_header_search>svg.icon-clear {
+	position: absolute;
+	height: inherit;
+	padding: 0 .5rem;
+	cursor: default;
+	color: #CCCCCC;
+}
+.left_header_search>svg.icon-search {
+	left: .5rem;
+}
+.left_header_search>svg.icon-clear {
+	right: .5rem;
+}
+
+.left_header_search-active>svg.icon {
+	color: #9A9A9A;
+}
+
+/* * * * * * * * * * * * * * * * * * *
+ *
+ *				Right Part
+ *
+ * * * * * * * * * * * * * * * * * * */
+
+.right {
+	flex: 1 0 auto;
+}
