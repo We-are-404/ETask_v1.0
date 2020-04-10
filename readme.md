@@ -45,3 +45,92 @@
 	...
 ```
 
+
+
+### 后端接口:
+
+#### 1.1 登录注册
+
+##### 1.1.1 登录
+
+请求接口：`https://app.isleslie.com/v1/user/login`
+
+请求方式：`POST`
+
+请求内容：
+
+```json
+{
+    "username":"xxxx",
+    "password":"xxxx"
+}
+```
+
+响应结果：
+
+1. 登录成功
+
+```json
+{
+    "code": 0,
+    "message": "登录成功",
+    "data": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJhYWEiLCJpYXQiOjE1ODY0NTA5OTYsImV4cCI6MTU4NjQ1Mjc5Nn0.VkR2ImE0pw29_K3hTE6-vgO6e_lCcVcDYIW-Qlc3YQ0"
+    }
+}
+```
+
+2. 登录失败
+
+```json
+{
+    "code":1,
+    "message":"登录失败",
+    "data":{}
+}
+```
+
+
+
+##### 1.1.2 注册
+
+请求接口：`https://app.isleslie.com/v1/user/register`
+
+请求方式：`POST`
+
+请求内容：
+
+```json
+{
+    "username":"xxxxx",
+    "password":"xxxxx",
+    "phone_number":"18666666666",
+    "team":"404wefound"
+}
+```
+
+响应结果：
+
+1. 注册成功
+
+   注册成功和登录一样直接返回token，可以不需要重新输入账号密码登录
+
+```json
+{
+    "code":0,
+    "message":"注册成功",
+    "data":{
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJhYWEiLCJpYXQiOjE1ODY0NTA5OTYsImV4cCI6MTU4NjQ1Mjc5Nn0.VkR2ImE0pw29_K3hTE6-vgO6e_lCcVcDYIW-Qlc3YQ0"
+    }
+}
+```
+
+2. 注册失败
+
+```json
+{
+    "code":1,
+    "message":"注册失败",
+    "data":{}
+}
+```
