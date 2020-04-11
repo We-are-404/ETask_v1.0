@@ -1,0 +1,82 @@
+/* * * * * * * * * * * * * * * * * * *
+ *
+ *				alert
+ *
+ * * * * * * * * * * * * * * * * * * */
+.marble_alert {
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .2);
+}
+.marble_alert_box {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgb(246, 242, 237);
+	min-width: 300px;
+	min-height: 100px;
+	max-width: 500px;
+	max-height: 700px;
+	word-break: break-all;
+	-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.marble_alert_title,
+.marble_alert_info {
+	border-bottom: 1px solid #e5e5e5;
+	padding: 15px;
+}
+
+.marble_alert_title {
+	font-size: 1.2rem;
+	border-bottom: 1px solid #e5e5e5;
+	color: rgb(235, 151, 131);
+	flex: 0 0 auto;
+	user-select: none;
+}
+
+.marble_alert_info {
+	color: #4B4B4B;
+	overflow: auto;
+	flex: 1 1 auto;
+}
+
+.marble_alert_info::-webkit-scrollbar {
+	width: 5px;
+	background-color: #aaa;
+	/* or add it to the track */
+}
+
+.marble_alert_info::-webkit-scrollbar-thumb {
+    background: rgb(235, 151, 131); 
+}
+.marble_alert_confirm {
+	background-color: rgb(235, 151, 131);
+	color: #fff;
+	border-radius: 6px;
+	padding: .5rem 1rem;
+	margin: .5rem 1rem;
+	text-align: center;
+	cursor: pointer;
+	flex: 0 0 auto;
+	align-self: flex-end;
+	user-select: none;
+}
+
+.marble_alert_confirm:hover {
+	background-color: rgb(255, 177, 150);
+}
+
+.marble_alert_confirm:active {
+	background-color: rgb(200, 100, 100);
+}

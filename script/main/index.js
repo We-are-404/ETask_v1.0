@@ -1,5 +1,8 @@
-import search from './search/index.js'
+import search from './events/search.js'
+
+import common from '../common/index.js'
+search()
 
 
-
-search.inputInit()
+common.$alert('ContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContent','Title')
+common.$alert('Content2','Title')
