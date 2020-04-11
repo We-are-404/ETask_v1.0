@@ -61,7 +61,7 @@
 
 3. HTTP响应状态码：
 
-   - 200：成功
+   - 200：HTTP请求成功，不代表业务请求成功
    - 201：token即将过期，后端重新签发token并依赖键data返回，请前端获取并替换之前的token
    - 401：未登录或者登录超时
    - 404：请求路径错误
@@ -76,7 +76,7 @@
 
    ```json
    {
-       "code":业务状态码,
+       "code":0,
        "message":"提示",
        "data":{
            "k1":"v1",
@@ -99,7 +99,7 @@
 
 ```json
 {
-    "phone_Number":"xxxx",
+    "phone_number":"xxxx",
     "password":"xxxx"
 }
 ```
