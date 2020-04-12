@@ -1,7 +1,13 @@
 import Login from './events/login.js'
 import Sign from './events/sign.js'
 
+window.onload = tokenStatus;
+
+
 var changeStatus = 0;
+
+
+
 $(".logo").click(function() {
     if(changeStatus === 0) {
         $(".login").addClass("login-hide")
@@ -14,7 +20,14 @@ $(".logo").click(function() {
     }
 })
 
+function tokenStatus() {
+    if(window.localStorage.getItem("token") != undefined) {
+        console.log("okk")
+        
+    }else {
 
+    }
+}
 
 
 Login();

@@ -33,9 +33,9 @@ function loginJudge() {
                 "password":login_password
             }
             console.log(login_name+"和"+login_password);
-            axios.post('https://app.isleslie.com/v1/user/login', login_data )
+            axios.post('https://app.isleslie.com/v1/user/login', login_data)
             .then(res => {
-                console.log(res.data)
+                window.localStorage.setItem("token", res.data.data.token);
             })
             .catch()
         }
