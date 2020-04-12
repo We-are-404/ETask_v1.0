@@ -1,4 +1,5 @@
 import Login from './events/login.js'
+import Sign from './events/sign.js'
 
 var changeStatus = 0;
 $(".logo").click(function() {
@@ -14,4 +15,7 @@ $(".logo").click(function() {
 })
 
 
+
+
 Login();
+Sign();

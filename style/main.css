@@ -29,15 +29,6 @@ html {
 	overflow: hidden;
 }
 
-.icon:hover {
-	color: rgb(255, 177, 150);
-}
-
-.icon:active,
-.icon-active {
-	color: rgb(200, 100, 100);
-}
-
 #root {
 	display: flex;
 	width: inherit;
@@ -55,6 +46,7 @@ html {
 svg.icon {
 	transition: background-color .2s ease,
 		color .2s ease;
+	border-radius: 50%;
 	cursor: pointer;
 }
 
@@ -74,6 +66,7 @@ svg.icon {
 		0 16px 24px 2px rgba(0, 0, 0, .14),
 		0 6px 30px 5px rgba(0, 0, 0, .12);
 	box-sizing: border-box;
+	padding: 0 3rem;
 	background-color: rgb(246, 242, 237);
 }
 
@@ -84,12 +77,10 @@ svg.icon {
 .left_header {
 	display: flex;
 	flex-direction: column;
-	padding: 0 2.5rem 1rem 2.5rem;
 }
 
 .left_header_top {
 	display: flex;
-	flex: 0 0 auto;
 	margin: 2rem 0 1.5rem 0;
 	justify-content: space-between;
 	align-items: center;
@@ -121,6 +112,13 @@ svg.icon {
 	color: rgb(235, 151, 131);
 }
 
+.left_header_createBtn:hover {
+	color: rgb(255, 177, 150);
+}
+
+.left_header_createBtn:active {
+	color: rgb(200, 100, 100);
+}
 
 /* * * Search * * */
 .left_header_search {
@@ -141,21 +139,13 @@ svg.icon {
 	box-sizing: border-box;
 	margin: 0 2.5rem 0 3rem;
 	padding: .6rem 0;
-	outline: none;
+	outline: unset;
 	overflow: hidden;
 	white-space: nowrap;
 	letter-spacing: .05rem;
 	font-size: 1rem;
 }
 
-.left_header_search_input:empty:before {
-	content: 'Search';
-	color: gray;
-}
-
-.left_header_search_input:focus:before {
-	content: none;
-}
 
 .left_header_search>svg.icon-search,
 .left_header_search>svg.icon-clear {
@@ -188,32 +178,6 @@ svg.icon {
 
 .left_header_search>svg.icon-clear.icon-clear_show {
 	display: block;
-}
-
-/* * * * * * * * * * * *
- * * * Left Main * * * *
- * * * * * * * * * * * */
-
-.left_main {
-	flex: 1 1 auto;
-}
-
-/* * * * * * * * * * * *
- * * * Left Bottom * * * *
- * * * * * * * * * * * */
-.left_bottom {
-	align-self: flex-end;
-	flex: 0 0 auto;
-	width: 100%;
-	box-sizing: border-box;
-	padding: 0 1rem .5rem 1rem;
-	display: flex;
-	justify-content: space-between;
-	font-size: 1.4rem;
-}
-
-.left_bottom .icon {
-	padding: 1rem 1.5rem;
 }
 
 /* * * * * * * * * * * * * * * * * * *

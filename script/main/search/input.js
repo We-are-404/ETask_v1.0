@@ -5,8 +5,7 @@
  * * * * * * * * * * * * * * * * * * */
 
 const input = $('.left_header_search_input');
-//初始化自定义PlaceHolder
-input.html('')
+
 
 
 
@@ -87,7 +86,7 @@ function clearButtonEvent() {
  *
  * * * * * * * * * * * * * * * * * * */
 
-const searchInit = () => {
+const inputInit = () => {
 	clearButtonToggle();
 	clearButtonEvent();
 	searchIconToggle();
@@ -95,4 +94,4 @@ const searchInit = () => {
 
 
 
-export default searchInit;
+export default inputInit;

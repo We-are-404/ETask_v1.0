@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>E-Task</title>
-		<link rel="stylesheet" href="../style/common.css">
 		<link rel="stylesheet" href="../style/main.css">
 	</head>
 	<body>
@@ -13,7 +12,7 @@
 				<div class="left_header">
 					<div class='left_header_top'>
 						<div class="left_header_user">
-							<img class='left_header_user_avatar' src='https://hokori.online/image/profile.jpg' />
+							<div class='left_header_user_avatar'></div>
 							<div class='left_header_user_name'>name</div>
 						</div>
 						<div class="left_header_createBtn">
@@ -43,24 +42,9 @@
 
 				<!--左侧底部-->
 				<div class="left_bottom">
-					<div class="left_bottom_friend">
-						<svg class="icon" aria-hidden="true">
-							<use xlink:href="#icon-icon_group">
-							</use>
-						</svg>
-					</div>
-					<div class="left_bottom_task">
-						<svg class="icon" aria-hidden="true">
-							<use xlink:href="#icon-icon_message">
-							</use>
-						</svg>
-					</div>
-					<div class="left_bottom_personal">
-						<svg class="icon" aria-hidden="true">
-							<use xlink:href="#icon-icon_more">
-							</use>
-						</svg>
-					</div>
+					<div class="left_bottom_friend"></div>
+					<div class="left_bottom_task"></div>
+					<div class="left_bottom_personal"></div>
 				</div>
 			</div>
 			<div class='right'>
@@ -68,9 +52,7 @@
 			</div>
 		</div>
 		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-		<script src='https://cdn.bootcss.com/axios/0.19.2/axios.min.js'></script>
 		<script src='../script/main/index.js' type='module'></script>
-		<script src='../script/common/index.js' type='module'></script>
 		<script src='../static/icon.js'></script>
 	</body>
 </html>
