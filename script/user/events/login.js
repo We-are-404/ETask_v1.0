@@ -29,11 +29,15 @@ function loginJudge() {
             return false;
         }else{
             let login_data={
-                "login_name":login_name,
-                "login_password":login_password
+                "phone_number":login_name,
+                "password":login_password
             }
             console.log(login_name+"和"+login_password);
-            axios.post('http://127.0.0.1:5000/login_data.json', login_data ).then(res => {})
+            axios.post('https://app.isleslie.com/v1/user/login', login_data )
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch()
         }
     })
 

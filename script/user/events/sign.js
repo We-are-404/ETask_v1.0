@@ -1,8 +1,8 @@
 let sign_name;
-let sign_phoneNumber;
-let sign_club;
-let sign_password;
-
+    sign_phoneNumber,
+    sign_club,
+    sign_password;
+    
 const Sign = () =>{
     signJudge();
 }
@@ -53,13 +53,19 @@ function signJudge() {
             return false;
         }else{
             let sign_data={
-                "sign_name":sign_name,
-                "sign_password":sign_password,
-                "sign_club":sign_club,
-                "sign_phoneNumber":sign_phoneNumber
+                "username":sign_name,
+                "password":sign_password,
+                "phone_number":sign_phoneNumber,
+                "team":sign_club
             }
             console.log(sign_name+"和"+sign_phoneNumber+"和"+sign_club+"和"+sign_password);
-            axios.post('http://127.0.0.1:5000/sign_data.json', sign_data ).then(res => {})
+            axios.post('https://app.isleslie.com/v1/user/register', sign_data )
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(res => {
+                console.log(res)
+            })
         }
     })
 }
