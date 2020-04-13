@@ -1,8 +1,23 @@
-import search from './events/search.js'
+/* * * * * * * * * * * * * * * * * * *
+ *		Produced By Hokori
+ * * * * * * * * * * * * * * * * * * */
+
+axios.defaults.baseURL = 'https://hokori.online/public/Marble/'
+
+import left from './events/left.js';
 
 import common from '../common/index.js'
-search()
 
 
-common.$alert('ContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContent','Title')
-common.$alert('Content2','Title')
+left()
+
+
+
+
+/* * * * * * * *$alert test* * * * * * * */
+// common.$alert(
+// 	'ContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContent',
+// 	'Title', {
+// 		modal: false
+// 	})
+// common.$alert('Content2')

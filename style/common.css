@@ -10,7 +10,6 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, .2);
 }
 .marble_alert_box {
 	position: absolute;
@@ -43,6 +42,7 @@
 	color: rgb(235, 151, 131);
 	flex: 0 0 auto;
 	user-select: none;
+	letter-spacing: .05rem;
 }
 
 .marble_alert_info {
@@ -64,8 +64,9 @@
 	background-color: rgb(235, 151, 131);
 	color: #fff;
 	border-radius: 6px;
-	padding: .5rem 1rem;
-	margin: .5rem 1rem;
+	padding: .5rem .8rem;
+	margin: .3rem .7rem;
+	font-size: .8rem;
 	text-align: center;
 	cursor: pointer;
 	flex: 0 0 auto;

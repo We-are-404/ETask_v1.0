@@ -3,6 +3,7 @@
  *				Global
  *
  * * * * * * * * * * * * * * * * * * */
+
 * {
 	padding: 0;
 	margin: 0;
@@ -27,6 +28,9 @@ html {
 	vertical-align: -0.15em;
 	fill: currentColor;
 	overflow: hidden;
+	transition: background-color .2s ease,
+		color .2s ease;
+	cursor: pointer;
 }
 
 .icon:hover {
@@ -52,11 +56,10 @@ html {
 	flex-direction: column;
 }
 
-svg.icon {
-	transition: background-color .2s ease,
-		color .2s ease;
-	cursor: pointer;
-}
+
+
+
+
 
 /* * * * * * * * * * * * * * * * * * *
  *
@@ -75,7 +78,10 @@ svg.icon {
 		0 6px 30px 5px rgba(0, 0, 0, .12);
 	box-sizing: border-box;
 	background-color: rgb(246, 242, 237);
+	align-self: flex-start;
 }
+
+
 
 /* * * * * * * * * * * *
  * * * Left Header * * *
@@ -89,7 +95,7 @@ svg.icon {
 
 .left_header_top {
 	display: flex;
-	flex: 0 0 auto;
+	flex: none;
 	margin: 2rem 0 1.5rem 0;
 	justify-content: space-between;
 	align-items: center;
@@ -98,13 +104,15 @@ svg.icon {
 /* * * User * * */
 .left_header_user {
 	display: flex;
+	cursor: pointer;
+	padding-right:2rem;
 }
 
 .left_header_user_avatar {
 	flex: 0 0 3.7rem;
 	margin-right: 1rem;
 	height: 3.7rem;
-	border-radius: 50%;
+	border-radius: 1rem;
 	background-color: rgb(235, 151, 131);
 }
 
@@ -125,7 +133,7 @@ svg.icon {
 /* * * Search * * */
 .left_header_search {
 	position: relative;
-	flex: 1 1 auto;
+	flex: auto;
 	height: 2.5rem;
 	font-size: 1.1rem;
 	border-radius: 1rem;
@@ -190,23 +198,67 @@ svg.icon {
 	display: block;
 }
 
+
+
 /* * * * * * * * * * * *
  * * * Left Main * * * *
  * * * * * * * * * * * */
 
 .left_main {
-	flex: 1 1 auto;
+	flex: auto;
+	display: flex;
+	flex-direction: column;
 }
+
+.left_main_friend {
+	flex: auto;
+	display: flex;
+	padding: 0 2.3rem;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	transition: background-color .1s ease;
+}
+
+.left_main_friend_user {
+	display: flex;
+	align-self: stretch;
+	align-items: center;
+}
+
+.left_main_friend_user_avatar {
+	height: 2.8rem;
+	width: 2.8rem;
+	margin: 1rem;
+	margin-left: 0;
+	border-radius: .5rem;
+	background-color: rgb(235, 151, 131);
+	-webkit-user-drag: none;
+}
+
+.left_main_friend:hover,
+.left_main_friend-active {
+	background-color: rgb(250, 250, 250);
+}
+.left_main_friend:active {
+	background-color: rgba(233, 165, 93,.2);
+}
+
+
 
 /* * * * * * * * * * * *
  * * * Left Bottom * * * *
  * * * * * * * * * * * */
 .left_bottom {
 	align-self: flex-end;
-	flex: 0 0 auto;
+	flex: none;
 	width: 100%;
 	box-sizing: border-box;
-	padding: 0 1rem .5rem 1rem;
+	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
 	font-size: 1.4rem;
@@ -215,6 +267,14 @@ svg.icon {
 .left_bottom .icon {
 	padding: 1rem 1.5rem;
 }
+.left_bottom-active{
+	color: rgb(244,174,58);
+}
+
+
+
+
+
 
 /* * * * * * * * * * * * * * * * * * *
  *
@@ -223,5 +283,5 @@ svg.icon {
  * * * * * * * * * * * * * * * * * * */
 
 .right {
-	flex: 1 1 auto;
+	flex: auto;
 }
