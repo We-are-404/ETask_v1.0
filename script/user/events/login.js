@@ -36,6 +36,7 @@ function loginJudge() {
             axios.post('https://app.isleslie.com/v1/user/login', login_data)
             .then(res => {
                 window.localStorage.setItem("token", res.data.data.token);
+                console.log(res.data)
             })
             .catch()
         }

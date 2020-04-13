@@ -1,4 +1,4 @@
-let sign_name;
+let sign_name,
     sign_phoneNumber,
     sign_club,
     sign_password;
@@ -32,9 +32,9 @@ function signJudge() {
     })
     $('.sign_btn').click(function () {
         sign_name = $('#sign_name').val();
-        sign_password = $('#sign_phoneNumber').val();
+        sign_phoneNumber = $('#sign_phoneNumber').val();
         sign_club = $('#sign_club').val();
-        sign_phoneNumber = $('#sign_password').val();
+        sign_password = $('#sign_password').val();
         if (sign_name === "") {
             alert("用户名不能空着哦");
             return false;
@@ -59,7 +59,7 @@ function signJudge() {
                 "team":sign_club
             }
             console.log(sign_name+"和"+sign_phoneNumber+"和"+sign_club+"和"+sign_password);
-            axios.post('https://app.isleslie.com/v1/user/register', sign_data )
+            axios.post('https://app.isleslie.com/v1/user/register', sign_data)
             .then(res => {
                 console.log(res.data)
             })

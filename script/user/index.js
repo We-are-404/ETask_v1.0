@@ -21,12 +21,15 @@ $(".logo").click(function() {
 })
 
 function tokenStatus() {
-    if(window.localStorage.getItem("token") != undefined) {
-        console.log("okk")
-        
-    }else {
-
-    }
+    const token = window.localStorage.getItem("token")
+    axios.get('https://app.isleslie.com/v1/user/testJwt', {
+        headers: {
+            'Authorization': 'Bearer ' + token
+        }
+    })
+    .then(res => {
+        console.log(res.data)
+    })
 }
 
 
