@@ -1,0 +1,19 @@
+server:
+    port: 8080
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://39.107.88.171:3306/app_isleslie_com
+        username: app_isleslie_com
+        password: bMnzMHsr4mnj6cjC
+    jackson:     #json输出驼峰变下划线
+        property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+mybatis:
+    type-aliases-package: com.isleslie.marble.model
+    configuration:
+        map-underscore-to-camel-case: true
+    mapper-locations: classpath:mapper/*Mapper.xml
+jwt:
+    privateSecret: NDA0d2Vmb3VuZG1hcmJsZQ==     #私钥
+    expiresSecond: 1800                         #过期时间，单位：秒。默认：1800秒，30分钟。
+    refreshSecond: 300                          #更新jwt时间的缓冲时间，单位：秒。默认：300秒，5分钟。
