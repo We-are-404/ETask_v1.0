@@ -113,12 +113,20 @@
 ```json
 {
     "code":1,
-    "message":"token无效，请登录后操作！",
+    "message":"请登录后操作！",
     "data":{}
 }
 ```
 
+3. token无效
 
+```json
+{
+    "code":1,
+    "message":"token无效，请登录后操作！",
+    "data":{}
+}
+```
 
 #### 1.2 登录注册
 
