@@ -1,6 +1,3 @@
-
-## Marble 1.0 开发文档
-
 ## Marble1.0 开发文档
 
 **此项目设为非盈利性内用！仅为404 we found内部成员练手项目，不得拿来私用、盈利。如经发现，立刻踢除404 we found 工作室**
@@ -57,7 +54,7 @@
 
 1. 数据交换格式：JSON
 
-2. 认证与状态维持：采用Json Web Token，登录后返回token，前端开发人员根据实际存起来，然后以后在每次请求在请求头Authorization设置值为`Bearer <Token>`，例如`Bearer xxxxxxxxxxxx`，去掉<>
+2. 认证与状态维持：采用Json Web Token，登录后返回token，前端开发人员根据实际存起来，然后以后在每次请求在请求头Authorization设置值为`Bearer <Token> `，例如`Bearer xxxxxxxxxxxx`，去掉<>
 
 3. HTTP响应状态码：
 
@@ -74,7 +71,7 @@
    - message：请求结果，字符串
    - data：响应的数据，对象
 
-   ```json
+   ```
    {
        "code":0,
        "message":"提示",
@@ -85,9 +82,53 @@
    }
    ```
 
-   
+#### 1.1 测试登录权限
 
-#### 1.1 登录注册
+请求接口：`https://app.isleslie.com/v1/user/testJwt`
+
+请求方式：`GET`
+
+请求内容：
+
+```json
+无，但是请在请求头Authorization设置值为`Bearer <Token>`，例如`Bearer xxxxxxxxxxxx`，去掉<>
+```
+
+响应结果：
+
+1. 通过登录权限认证
+
+```json
+{
+    "code": 0,
+    "message": "通过Jwt认证，可以进行登录后的一系列操作！",
+    "data": {
+        "user": "我是模拟操作返回后的数据"
+    }
+}
+```
+
+2. 没有通过登录权限认证
+
+```json
+{
+    "code":1,
+    "message":"请登录后操作！",
+    "data":{}
+}
+```
+
+3. token无效
+
+```json
+{
+    "code":1,
+    "message":"token无效，请登录后操作！",
+    "data":{}
+}
+```
+
+#### 1.2 登录注册
 
 ##### 1.1.1 登录
 
@@ -111,7 +152,7 @@
 ```json
 {
     "code": 0,
-    "message": "登录成功",
+    "message": "登录成功！",
     "data": {
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJhYWEiLCJpYXQiOjE1ODY0NTA5OTYsImV4cCI6MTU4NjQ1Mjc5Nn0.VkR2ImE0pw29_K3hTE6-vgO6e_lCcVcDYIW-Qlc3YQ0"
     }
@@ -123,7 +164,7 @@
 ```json
 {
     "code":1,
-    "message":"登录失败",
+    "message":"登录失败，请检查手机号码或密码是否正确！",
     "data":{}
 }
 ```
@@ -156,7 +197,7 @@
 ```json
 {
     "code":0,
-    "message":"注册成功",
+    "message":"注册成功!",
     "data":{
         "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOiJhYWEiLCJpYXQiOjE1ODY0NTA5OTYsImV4cCI6MTU4NjQ1Mjc5Nn0.VkR2ImE0pw29_K3hTE6-vgO6e_lCcVcDYIW-Qlc3YQ0"
     }
@@ -168,7 +209,7 @@
 ```json
 {
     "code":1,
-    "message":"注册失败",
+    "message":"注册失败，手机号码或用户名已存在！",
     "data":{}
 }
 ```

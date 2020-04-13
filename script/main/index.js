@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* * * * * * * * * * * * * * * * * * *
  *		Produced By Hokori
  * * * * * * * * * * * * * * * * * * */
@@ -21,3 +22,10 @@ left()
 // 		modal: false
 // 	})
 // common.$alert('Content2')
+=======
+import search from './search/index.js'
+
+
+
+search.inputInit()
+>>>>>>> 749170b8701d4a09273257a95573c41668c5a569
