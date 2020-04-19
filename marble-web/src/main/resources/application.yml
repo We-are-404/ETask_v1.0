@@ -1,0 +1,16 @@
+server:
+    port: 8080
+spring:
+    profiles:
+        active: dev     #默认是开发环境
+    jackson:            #json输出驼峰变下划线
+        property-naming-strategy: CAMEL_CASE_TO_LOWER_CASE_WITH_UNDERSCORES
+mybatis:
+    type-aliases-package: com.isleslie.marble.model
+    configuration:
+        map-underscore-to-camel-case: true
+    mapper-locations: classpath:mapper/*.xml
+jwt:
+    private-secret: NDA0d2Vmb3VuZG1hcmJsZQ==     #私钥
+    expires-second: 1800                         #过期时间，单位：秒。默认：1800秒，30分钟。
+    refresh-second: 300                          #更新jwt时间的缓冲时间，单位：秒。默认：300秒，5分钟。

@@ -6,16 +6,27 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="marble" />
+        <module name="marble-web" />
+        <module name="marble-service" />
+        <module name="marble-mapper" />
+        <module name="marble-model" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="marble" target="1.8" />
+      <module name="marble-mapper" target="1.8" />
+      <module name="marble-model" target="1.8" />
+      <module name="marble-service" target="1.8" />
+      <module name="marble-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="marble" options="-parameters" />
+      <module name="marble-mapper" options="-parameters" />
+      <module name="marble-model" options="-parameters" />
+      <module name="marble-service" options="-parameters" />
+      <module name="marble-web" options="-parameters" />
     </option>
   </component>
 </project>

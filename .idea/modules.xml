@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/marble.iml" filepath="$PROJECT_DIR$/marble.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marble-mapper/marble-mapper.iml" filepath="$PROJECT_DIR$/marble-mapper/marble-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marble-model/marble-model.iml" filepath="$PROJECT_DIR$/marble-model/marble-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marble-service/marble-service.iml" filepath="$PROJECT_DIR$/marble-service/marble-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marble-web/marble-web.iml" filepath="$PROJECT_DIR$/marble-web/marble-web.iml" />
     </modules>
   </component>
 </project>
